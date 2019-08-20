@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    function Temperature(doC) {
+        this.doC = doC;
+        this.getDoC = function () {
+            return doC;
+        }
+        this.getDoF = function () {
+            return (doC*1.8)+32;
+        }
+        this.getDoK = function () {
+            return doC + 273;
+        }
+    }
+    let temperature = new Temperature(25);
+    let doF = temperature.getDoF();
+    let doK = temperature.getDoK();
+    document.write("Độ F là: " + doF +"+ <br>");
+    document.write("Độ K là: " + doK);
+</script>
+</body>
+</html>
